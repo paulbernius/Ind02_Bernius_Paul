@@ -23,7 +23,7 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-0" translatesAutoresizingMaskIntoConstraints="NO" id="shV-gf-ktK">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="shV-gf-ktK">
                                 <rect key="frame" x="9" y="172" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -31,7 +31,7 @@
                                     <outletCollection property="gestureRecognizers" destination="MLj-Bi-Ybn" appends="YES" id="aci-on-9a3"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-0" translatesAutoresizingMaskIntoConstraints="NO" id="PJn-Jg-rlg">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-0" translatesAutoresizingMaskIntoConstraints="NO" id="PJn-Jg-rlg">
                                 <rect key="frame" x="102" y="172" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -39,7 +39,7 @@
                                     <outletCollection property="gestureRecognizers" destination="kzJ-un-dvW" appends="YES" id="1fP-W5-9S6"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-0" translatesAutoresizingMaskIntoConstraints="NO" id="8bh-qJ-Gjy">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-0" translatesAutoresizingMaskIntoConstraints="NO" id="8bh-qJ-Gjy">
                                 <rect key="frame" x="195" y="172" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -47,7 +47,7 @@
                                     <outletCollection property="gestureRecognizers" destination="lZj-OC-FIw" appends="YES" id="eFe-Ve-F9e"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-0" translatesAutoresizingMaskIntoConstraints="NO" id="clq-ut-cIV">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-0" translatesAutoresizingMaskIntoConstraints="NO" id="clq-ut-cIV">
                                 <rect key="frame" x="288" y="172" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -55,7 +55,7 @@
                                     <outletCollection property="gestureRecognizers" destination="7Um-Ck-4IJ" appends="YES" id="TOY-le-zym"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-1" translatesAutoresizingMaskIntoConstraints="NO" id="EPS-aL-gsz">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-1" translatesAutoresizingMaskIntoConstraints="NO" id="EPS-aL-gsz">
                                 <rect key="frame" x="9" y="265" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -63,7 +63,7 @@
                                     <outletCollection property="gestureRecognizers" destination="JUx-bL-M0I" appends="YES" id="XIg-bd-Tzc"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-1" translatesAutoresizingMaskIntoConstraints="NO" id="Oeo-g4-Cpa">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-1" translatesAutoresizingMaskIntoConstraints="NO" id="Oeo-g4-Cpa">
                                 <rect key="frame" x="102" y="265" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -71,7 +71,7 @@
                                     <outletCollection property="gestureRecognizers" destination="oVm-pS-Sgs" appends="YES" id="z2I-1l-nCs"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-1" translatesAutoresizingMaskIntoConstraints="NO" id="Fiu-h0-sDh">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-1" translatesAutoresizingMaskIntoConstraints="NO" id="Fiu-h0-sDh">
                                 <rect key="frame" x="195" y="265" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -79,7 +79,7 @@
                                     <outletCollection property="gestureRecognizers" destination="zE3-hB-sYE" appends="YES" id="xkf-8o-24E"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ph-4X-psl">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ph-4X-psl">
                                 <rect key="frame" x="288" y="265" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -87,7 +87,7 @@
                                     <outletCollection property="gestureRecognizers" destination="bqC-XE-Moh" appends="YES" id="REx-ZJ-o9A"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-2" translatesAutoresizingMaskIntoConstraints="NO" id="pHn-YD-37X">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-2" translatesAutoresizingMaskIntoConstraints="NO" id="pHn-YD-37X">
                                 <rect key="frame" x="9" y="358" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -95,7 +95,7 @@
                                     <outletCollection property="gestureRecognizers" destination="FJs-VV-gBq" appends="YES" id="mtR-Cc-kLW"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-2" translatesAutoresizingMaskIntoConstraints="NO" id="4si-BX-Mi5">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-2" translatesAutoresizingMaskIntoConstraints="NO" id="4si-BX-Mi5">
                                 <rect key="frame" x="102" y="358" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -103,7 +103,7 @@
                                     <outletCollection property="gestureRecognizers" destination="vJS-FU-OqG" appends="YES" id="IRx-Js-XcM"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-2" translatesAutoresizingMaskIntoConstraints="NO" id="nZb-16-79R">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-2" translatesAutoresizingMaskIntoConstraints="NO" id="nZb-16-79R">
                                 <rect key="frame" x="195" y="358" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -111,7 +111,7 @@
                                     <outletCollection property="gestureRecognizers" destination="TuJ-ZM-yyz" appends="YES" id="vGH-1y-WUV"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-2" translatesAutoresizingMaskIntoConstraints="NO" id="QZu-4P-84K">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-2" translatesAutoresizingMaskIntoConstraints="NO" id="QZu-4P-84K">
                                 <rect key="frame" x="288" y="358" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -119,7 +119,7 @@
                                     <outletCollection property="gestureRecognizers" destination="SGz-TJ-yxV" appends="YES" id="d0L-XA-DGv"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-3" translatesAutoresizingMaskIntoConstraints="NO" id="cQx-ZP-T2r">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-3" translatesAutoresizingMaskIntoConstraints="NO" id="cQx-ZP-T2r">
                                 <rect key="frame" x="9" y="451" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -127,7 +127,7 @@
                                     <outletCollection property="gestureRecognizers" destination="2Gh-ze-PtU" appends="YES" id="9jC-l6-dWQ"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-3" translatesAutoresizingMaskIntoConstraints="NO" id="M8h-uH-CzN">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-3" translatesAutoresizingMaskIntoConstraints="NO" id="M8h-uH-CzN">
                                 <rect key="frame" x="102" y="451" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -135,7 +135,7 @@
                                     <outletCollection property="gestureRecognizers" destination="vGx-On-7th" appends="YES" id="LFk-GR-zpj"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-3" translatesAutoresizingMaskIntoConstraints="NO" id="cCj-aH-KJR">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-3" translatesAutoresizingMaskIntoConstraints="NO" id="cCj-aH-KJR">
                                 <rect key="frame" x="195" y="451" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -143,7 +143,7 @@
                                     <outletCollection property="gestureRecognizers" destination="FaO-hI-MZ6" appends="YES" id="sPR-2v-bbO"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-3" translatesAutoresizingMaskIntoConstraints="NO" id="1td-WZ-hID">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-3" translatesAutoresizingMaskIntoConstraints="NO" id="1td-WZ-hID">
                                 <rect key="frame" x="288" y="451" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -151,7 +151,7 @@
                                     <outletCollection property="gestureRecognizers" destination="MYG-3N-1DS" appends="YES" id="mVR-zS-ofV"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-4" translatesAutoresizingMaskIntoConstraints="NO" id="5AY-sI-OE0">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-4" translatesAutoresizingMaskIntoConstraints="NO" id="5AY-sI-OE0">
                                 <rect key="frame" x="9" y="544" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -159,7 +159,7 @@
                                     <outletCollection property="gestureRecognizers" destination="fQ6-o7-wBw" appends="YES" id="Jkz-zz-bVw"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-4" translatesAutoresizingMaskIntoConstraints="NO" id="r9G-3L-8c9">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-4" translatesAutoresizingMaskIntoConstraints="NO" id="r9G-3L-8c9">
                                 <rect key="frame" x="102" y="544" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -167,7 +167,7 @@
                                     <outletCollection property="gestureRecognizers" destination="qaF-NT-rJf" appends="YES" id="wGw-9h-WuO"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-4" translatesAutoresizingMaskIntoConstraints="NO" id="Ayv-YR-V12">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-4" translatesAutoresizingMaskIntoConstraints="NO" id="Ayv-YR-V12">
                                 <rect key="frame" x="195" y="544" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -175,7 +175,7 @@
                                     <outletCollection property="gestureRecognizers" destination="Hxa-YK-Sr3" appends="YES" id="SsM-Py-Jiv"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-4" translatesAutoresizingMaskIntoConstraints="NO" id="hhY-ip-Lhu">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-4" translatesAutoresizingMaskIntoConstraints="NO" id="hhY-ip-Lhu">
                                 <rect key="frame" x="288" y="544" width="93" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -184,8 +184,9 @@
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXN-5d-9T1">
-                                <rect key="frame" x="144" y="679" width="106" height="44"/>
+                                <rect key="frame" x="144" y="667" width="106" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Shuffle">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
@@ -195,8 +196,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqC-KZ-9Dh">
-                                <rect key="frame" x="105" y="749" width="180" height="44"/>
+                                <rect key="frame" x="105" y="745" width="180" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Show Answer">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
@@ -207,7 +209,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="AnswerButton" destination="TqC-KZ-9Dh" id="eAd-82-lgj"/>
@@ -231,51 +233,116 @@
                         <outlet property="Box7" destination="Oeo-g4-Cpa" id="qMr-5V-VX2"/>
                         <outlet property="Box8" destination="4si-BX-Mi5" id="NlR-Hz-pTr"/>
                         <outlet property="Box9" destination="M8h-uH-CzN" id="Rx7-rz-2Py"/>
+                        <outlet property="answerButton" destination="TqC-KZ-9Dh" id="xDb-um-MAh"/>
+                        <outlet property="shuffleButton" destination="SXN-5d-9T1" id="Hum-6n-wSR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="MLj-Bi-Ybn">
                     <connections>
-                        <action selector="TapHandler:" destination="BYZ-38-t0r" id="RN4-JW-lbj"/>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="UNo-Jg-9RM"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="JUx-bL-M0I">
                     <connections>
-                        <action selector="TapHandler:" destination="BYZ-38-t0r" id="A6M-qk-DEn"/>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="N3G-JZ-Y5t"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="FJs-VV-gBq">
                     <connections>
-                        <action selector="TapHandler:" destination="BYZ-38-t0r" id="HvM-ul-puz"/>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="rf6-C0-LRR"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="2Gh-ze-PtU"/>
-                <tapGestureRecognizer id="fQ6-o7-wBw"/>
+                <tapGestureRecognizer id="2Gh-ze-PtU">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="jRL-8A-Uxm"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="fQ6-o7-wBw">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="ouk-a9-q9f"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="kzJ-un-dvW">
                     <connections>
-                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="UeZ-vg-fEe"/>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="jlo-gZ-1go"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="oVm-pS-Sgs"/>
-                <tapGestureRecognizer id="vJS-FU-OqG"/>
-                <tapGestureRecognizer id="vGx-On-7th"/>
-                <tapGestureRecognizer id="qaF-NT-rJf"/>
-                <tapGestureRecognizer id="lZj-OC-FIw"/>
-                <tapGestureRecognizer id="zE3-hB-sYE"/>
-                <tapGestureRecognizer id="TuJ-ZM-yyz"/>
-                <tapGestureRecognizer id="FaO-hI-MZ6"/>
-                <tapGestureRecognizer id="Hxa-YK-Sr3"/>
-                <tapGestureRecognizer id="7Um-Ck-4IJ"/>
-                <tapGestureRecognizer id="bqC-XE-Moh"/>
-                <tapGestureRecognizer id="SGz-TJ-yxV"/>
-                <tapGestureRecognizer id="MYG-3N-1DS"/>
-                <tapGestureRecognizer id="v6c-mB-KOj"/>
+                <tapGestureRecognizer id="oVm-pS-Sgs">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="nGj-M7-ZQa"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="vJS-FU-OqG">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="rcM-13-8j1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="vGx-On-7th">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="dwO-5A-hqj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="qaF-NT-rJf">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="fUm-Ij-euz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="lZj-OC-FIw">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="e6l-LP-jhw"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zE3-hB-sYE">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="8lS-TT-Cfc"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TuJ-ZM-yyz">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="eMi-Ca-3tk"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FaO-hI-MZ6">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="LRk-2R-U0e"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Hxa-YK-Sr3">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="P1n-9o-gWj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="7Um-Ck-4IJ">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="WLs-h0-dEa"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bqC-XE-Moh">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="v2B-Da-xji"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="SGz-TJ-yxV">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="AWY-26-Sgk"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="MYG-3N-1DS">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="pSA-4S-5AH"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="v6c-mB-KOj">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="cDW-ct-i42"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="20" y="85.308056872037909"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Mojave Picture-0-0" width="278" height="278"/>
         <image name="Mojave Picture-0-1" width="278" height="279"/>
         <image name="Mojave Picture-0-2" width="278" height="278"/>
         <image name="Mojave Picture-0-3" width="278" height="279"/>
@@ -295,8 +362,9 @@
         <image name="Mojave Picture-3-2" width="279" height="278"/>
         <image name="Mojave Picture-3-3" width="279" height="279"/>
         <image name="Mojave Picture-3-4" width="279" height="279"/>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="empty" width="225" height="225"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
