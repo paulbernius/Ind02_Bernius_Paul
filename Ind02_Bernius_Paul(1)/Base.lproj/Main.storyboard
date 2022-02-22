@@ -1,24 +1,302 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ind02_Bernius_Paul_1_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="BoardView" customModule="Ind02_Bernius_Paul_1_" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Paul Bernius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORZ-4j-DSg">
+                                <rect key="frame" x="71" y="67" width="249" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-0" translatesAutoresizingMaskIntoConstraints="NO" id="shV-gf-ktK">
+                                <rect key="frame" x="9" y="172" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MLj-Bi-Ybn" appends="YES" id="aci-on-9a3"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-0" translatesAutoresizingMaskIntoConstraints="NO" id="PJn-Jg-rlg">
+                                <rect key="frame" x="102" y="172" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kzJ-un-dvW" appends="YES" id="1fP-W5-9S6"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-0" translatesAutoresizingMaskIntoConstraints="NO" id="8bh-qJ-Gjy">
+                                <rect key="frame" x="195" y="172" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lZj-OC-FIw" appends="YES" id="eFe-Ve-F9e"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-0" translatesAutoresizingMaskIntoConstraints="NO" id="clq-ut-cIV">
+                                <rect key="frame" x="288" y="172" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7Um-Ck-4IJ" appends="YES" id="TOY-le-zym"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-1" translatesAutoresizingMaskIntoConstraints="NO" id="EPS-aL-gsz">
+                                <rect key="frame" x="9" y="265" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JUx-bL-M0I" appends="YES" id="XIg-bd-Tzc"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-1" translatesAutoresizingMaskIntoConstraints="NO" id="Oeo-g4-Cpa">
+                                <rect key="frame" x="102" y="265" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oVm-pS-Sgs" appends="YES" id="z2I-1l-nCs"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-1" translatesAutoresizingMaskIntoConstraints="NO" id="Fiu-h0-sDh">
+                                <rect key="frame" x="195" y="265" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zE3-hB-sYE" appends="YES" id="xkf-8o-24E"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ph-4X-psl">
+                                <rect key="frame" x="288" y="265" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bqC-XE-Moh" appends="YES" id="REx-ZJ-o9A"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-2" translatesAutoresizingMaskIntoConstraints="NO" id="pHn-YD-37X">
+                                <rect key="frame" x="9" y="358" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FJs-VV-gBq" appends="YES" id="mtR-Cc-kLW"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-2" translatesAutoresizingMaskIntoConstraints="NO" id="4si-BX-Mi5">
+                                <rect key="frame" x="102" y="358" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vJS-FU-OqG" appends="YES" id="IRx-Js-XcM"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-2" translatesAutoresizingMaskIntoConstraints="NO" id="nZb-16-79R">
+                                <rect key="frame" x="195" y="358" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="TuJ-ZM-yyz" appends="YES" id="vGH-1y-WUV"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-2" translatesAutoresizingMaskIntoConstraints="NO" id="QZu-4P-84K">
+                                <rect key="frame" x="288" y="358" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="SGz-TJ-yxV" appends="YES" id="d0L-XA-DGv"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-3" translatesAutoresizingMaskIntoConstraints="NO" id="cQx-ZP-T2r">
+                                <rect key="frame" x="9" y="451" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2Gh-ze-PtU" appends="YES" id="9jC-l6-dWQ"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-3" translatesAutoresizingMaskIntoConstraints="NO" id="M8h-uH-CzN">
+                                <rect key="frame" x="102" y="451" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="vGx-On-7th" appends="YES" id="LFk-GR-zpj"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-3" translatesAutoresizingMaskIntoConstraints="NO" id="cCj-aH-KJR">
+                                <rect key="frame" x="195" y="451" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FaO-hI-MZ6" appends="YES" id="sPR-2v-bbO"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-3" translatesAutoresizingMaskIntoConstraints="NO" id="1td-WZ-hID">
+                                <rect key="frame" x="288" y="451" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MYG-3N-1DS" appends="YES" id="mVR-zS-ofV"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-0-4" translatesAutoresizingMaskIntoConstraints="NO" id="5AY-sI-OE0">
+                                <rect key="frame" x="9" y="544" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fQ6-o7-wBw" appends="YES" id="Jkz-zz-bVw"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-1-4" translatesAutoresizingMaskIntoConstraints="NO" id="r9G-3L-8c9">
+                                <rect key="frame" x="102" y="544" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qaF-NT-rJf" appends="YES" id="wGw-9h-WuO"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-2-4" translatesAutoresizingMaskIntoConstraints="NO" id="Ayv-YR-V12">
+                                <rect key="frame" x="195" y="544" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Hxa-YK-Sr3" appends="YES" id="SsM-Py-Jiv"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mojave Picture-3-4" translatesAutoresizingMaskIntoConstraints="NO" id="hhY-ip-Lhu">
+                                <rect key="frame" x="288" y="544" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="v6c-mB-KOj" appends="YES" id="Qiy-eA-qLs"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXN-5d-9T1">
+                                <rect key="frame" x="144" y="679" width="106" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Shuffle">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ShuffleButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJn-7B-1HC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqC-KZ-9Dh">
+                                <rect key="frame" x="105" y="749" width="180" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show Answer">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="AnswerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mia-vl-sED"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                     </view>
+                    <connections>
+                        <outlet property="AnswerButton" destination="TqC-KZ-9Dh" id="eAd-82-lgj"/>
+                        <outlet property="Box1" destination="shV-gf-ktK" id="XcT-WJ-PTR"/>
+                        <outlet property="Box10" destination="r9G-3L-8c9" id="L0m-IM-1Fb"/>
+                        <outlet property="Box11" destination="8bh-qJ-Gjy" id="Lnh-0I-1qY"/>
+                        <outlet property="Box12" destination="Fiu-h0-sDh" id="svX-CH-Tfp"/>
+                        <outlet property="Box13" destination="nZb-16-79R" id="d76-Oo-oIy"/>
+                        <outlet property="Box14" destination="cCj-aH-KJR" id="zvZ-xH-jjr"/>
+                        <outlet property="Box15" destination="Ayv-YR-V12" id="NwF-Wp-0Dh"/>
+                        <outlet property="Box16" destination="clq-ut-cIV" id="TLJ-IA-bR3"/>
+                        <outlet property="Box17" destination="0Ph-4X-psl" id="suS-Qp-h5Z"/>
+                        <outlet property="Box18" destination="QZu-4P-84K" id="BP7-gs-6nM"/>
+                        <outlet property="Box19" destination="1td-WZ-hID" id="Cw2-9D-afZ"/>
+                        <outlet property="Box2" destination="EPS-aL-gsz" id="Lot-Ws-8dF"/>
+                        <outlet property="Box20" destination="hhY-ip-Lhu" id="bRg-8d-awj"/>
+                        <outlet property="Box3" destination="pHn-YD-37X" id="fVx-LX-e2z"/>
+                        <outlet property="Box4" destination="cQx-ZP-T2r" id="iZf-RF-9WY"/>
+                        <outlet property="Box5" destination="5AY-sI-OE0" id="xAj-Se-hKD"/>
+                        <outlet property="Box6" destination="PJn-Jg-rlg" id="IUY-Hw-7J2"/>
+                        <outlet property="Box7" destination="Oeo-g4-Cpa" id="qMr-5V-VX2"/>
+                        <outlet property="Box8" destination="4si-BX-Mi5" id="NlR-Hz-pTr"/>
+                        <outlet property="Box9" destination="M8h-uH-CzN" id="Rx7-rz-2Py"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="MLj-Bi-Ybn">
+                    <connections>
+                        <action selector="TapHandler:" destination="BYZ-38-t0r" id="RN4-JW-lbj"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="JUx-bL-M0I">
+                    <connections>
+                        <action selector="TapHandler:" destination="BYZ-38-t0r" id="A6M-qk-DEn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="FJs-VV-gBq">
+                    <connections>
+                        <action selector="TapHandler:" destination="BYZ-38-t0r" id="HvM-ul-puz"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="2Gh-ze-PtU"/>
+                <tapGestureRecognizer id="fQ6-o7-wBw"/>
+                <tapGestureRecognizer id="kzJ-un-dvW">
+                    <connections>
+                        <action selector="tapHandler:" destination="BYZ-38-t0r" id="UeZ-vg-fEe"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="oVm-pS-Sgs"/>
+                <tapGestureRecognizer id="vJS-FU-OqG"/>
+                <tapGestureRecognizer id="vGx-On-7th"/>
+                <tapGestureRecognizer id="qaF-NT-rJf"/>
+                <tapGestureRecognizer id="lZj-OC-FIw"/>
+                <tapGestureRecognizer id="zE3-hB-sYE"/>
+                <tapGestureRecognizer id="TuJ-ZM-yyz"/>
+                <tapGestureRecognizer id="FaO-hI-MZ6"/>
+                <tapGestureRecognizer id="Hxa-YK-Sr3"/>
+                <tapGestureRecognizer id="7Um-Ck-4IJ"/>
+                <tapGestureRecognizer id="bqC-XE-Moh"/>
+                <tapGestureRecognizer id="SGz-TJ-yxV"/>
+                <tapGestureRecognizer id="MYG-3N-1DS"/>
+                <tapGestureRecognizer id="v6c-mB-KOj"/>
             </objects>
+            <point key="canvasLocation" x="20" y="85.308056872037909"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Mojave Picture-0-0" width="278" height="278"/>
+        <image name="Mojave Picture-0-1" width="278" height="279"/>
+        <image name="Mojave Picture-0-2" width="278" height="278"/>
+        <image name="Mojave Picture-0-3" width="278" height="279"/>
+        <image name="Mojave Picture-0-4" width="278" height="279"/>
+        <image name="Mojave Picture-1-0" width="279" height="278"/>
+        <image name="Mojave Picture-1-1" width="279" height="279"/>
+        <image name="Mojave Picture-1-2" width="279" height="278"/>
+        <image name="Mojave Picture-1-3" width="279" height="279"/>
+        <image name="Mojave Picture-1-4" width="279" height="279"/>
+        <image name="Mojave Picture-2-0" width="278" height="278"/>
+        <image name="Mojave Picture-2-1" width="278" height="279"/>
+        <image name="Mojave Picture-2-2" width="278" height="278"/>
+        <image name="Mojave Picture-2-3" width="278" height="279"/>
+        <image name="Mojave Picture-2-4" width="278" height="279"/>
+        <image name="Mojave Picture-3-0" width="279" height="278"/>
+        <image name="Mojave Picture-3-1" width="279" height="279"/>
+        <image name="Mojave Picture-3-2" width="279" height="278"/>
+        <image name="Mojave Picture-3-3" width="279" height="279"/>
+        <image name="Mojave Picture-3-4" width="279" height="279"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
