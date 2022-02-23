@@ -73,14 +73,16 @@ class ViewController: UIViewController {
                 shuffleButton.isEnabled = true // Enable shuffle button
                 shuffleButton.setTitle("Win! Shuffle again?", for: .normal) // Replace shuffle button text
                 answerButton.isEnabled = false
-                
+                shuffleButton.tintColor = UIColor.systemGreen
+                //shuffleButton.setTitleColor(.systemGreen, for: .normal)
+                //shuffleButton.
             }
             return
         }
         
     }
     
-    var nameOfFiles = ["Mojave Picture-0-1", "empty", "Mojave Picture-0-2", "Mojave Picture-0-3", "Mojave Picture-0-4", "Mojave Picture-1-0", "Mojave Picture-1-1", "Mojave Picture-1-2", "Mojave Picture-1-3", "Mojave Picture-1-4", "Mojave Picture-2-0", "Mojave Picture-2-1", "Mojave Picture-2-2", "Mojave Picture-2-3", "Mojave Picture-2-4", "Mojave Picture-3-0", "Mojave Picture-3-1", "Mojave Picture-3-2", "Mojave Picture-3-3", "Mojave Picture-3-4"].shuffled() // Shuffled array to shuffle puzzle pieces
+    var nameOfFiles = ["Mojave Picture-0-1", "empty", "Mojave Picture-0-2", "Mojave Picture-0-3", "Mojave Picture-0-4", "Mojave Picture-1-0", "Mojave Picture-1-1", "Mojave Picture-1-2", "Mojave Picture-1-3", "Mojave Picture-1-4", "Mojave Picture-2-0", "Mojave Picture-2-1", "Mojave Picture-2-2", "Mojave Picture-2-3", "Mojave Picture-2-4", "Mojave Picture-3-0", "Mojave Picture-3-1", "Mojave Picture-3-2", "Mojave Picture-3-3", "Mojave Picture-3-4"]//.shuffled() // Shuffled array to shuffle puzzle pieces
     
     
     var answer = ["empty", "Mojave Picture-0-1", "Mojave Picture-0-2", "Mojave Picture-0-3", "Mojave Picture-0-4", "Mojave Picture-1-0", "Mojave Picture-1-1", "Mojave Picture-1-2", "Mojave Picture-1-3", "Mojave Picture-1-4", "Mojave Picture-2-0", "Mojave Picture-2-1", "Mojave Picture-2-2", "Mojave Picture-2-3", "Mojave Picture-2-4", "Mojave Picture-3-0", "Mojave Picture-3-1", "Mojave Picture-3-2", "Mojave Picture-3-3", "Mojave Picture-3-4"] // Answer key
@@ -156,6 +158,8 @@ class ViewController: UIViewController {
             Box18.image = UIImage(named: nameOfFiles[17])
             Box19.image = UIImage(named: nameOfFiles[18])
             Box20.image = UIImage(named: nameOfFiles[19])
+            shuffleButton.tintColor = UIColor.systemGreen
+            shuffleButton.setTitle("Shuffle", for: .normal)
             shuffleButton.isEnabled = false // Disable shuffle button since game has started
         }
         
