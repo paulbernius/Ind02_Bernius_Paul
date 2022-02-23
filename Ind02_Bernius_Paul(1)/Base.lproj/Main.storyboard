@@ -184,7 +184,7 @@
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXN-5d-9T1">
-                                <rect key="frame" x="144" y="667" width="106" height="44"/>
+                                <rect key="frame" x="100" y="667" width="190" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGray2Color"/>
                                 <state key="normal" title="Button"/>
@@ -196,7 +196,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqC-KZ-9Dh">
-                                <rect key="frame" x="105" y="745" width="180" height="44"/>
+                                <rect key="frame" x="100" y="745" width="190" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGray2Color"/>
                                 <state key="normal" title="Button"/>
@@ -205,6 +205,15 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="AnswerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mia-vl-sED"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iI-I9-Z9O">
+                                <rect key="frame" x="296" y="680" width="90" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Force Win"/>
+                                <connections>
+                                    <action selector="forceWinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Je-sD-gqo"/>
                                 </connections>
                             </button>
                         </subviews>

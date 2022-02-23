@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+    // Declaring all outlets
     @IBOutlet weak var Box1: UIImageView!
     @IBOutlet weak var Box2: UIImageView!
     @IBOutlet weak var Box3: UIImageView!
@@ -37,17 +37,40 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        answerButton.setTitle("Show Answer", for: .normal)
+        shuffleButton.setTitle("Shuffle", for: .normal)
+        answerButton.isEnabled = false
+        //answerButton.isEnabled = false
+        //answerButton.isSelected = false
     }
     
-    @IBAction func tapHandler(_ sender: UITapGestureRecognizer) {
+    
+    @IBAction func forceWinButton(_ sender: UIButton) {
+        var indexTest = 0
+        for elem in answer {
+            nameOfFiles[indexTest] = elem
+            indexTest += 1
+        }
+        if checkForWin() {
+            print("Win detected!")
+            shuffleButton.isEnabled = true // Enable shuffle button
+            shuffleButton.setTitle("Win! Shuffle again?", for: .normal) // Replace shuffle button text
+            
+        }
+    }
+    
+    
+    @IBAction func tapHandler(_ sender: UITapGestureRecognizer) { // Handles taps on boxes
         guard let tappedImageView = sender.view as? UIImageView else {
             return
         }
-        if isValid(tappedImageView) {
-            if checkForWin() {
+        print("Calling isValid")
+        if !isValid(tappedImageView) { // Calls isValid function on the tapped box
+            if checkForWin() { // Checks for win if move was valid
                 print("Win detected")
-                shuffleButton.isEnabled = true
-                shuffleButton.setTitle("Win! Shuffle again?", for: .normal)
+                shuffleButton.isEnabled = true // Enable shuffle button
+                shuffleButton.setTitle("Win! Shuffle again?", for: .normal) // Replace shuffle button text
+                answerButton.isEnabled = false
                 
             }
             return
@@ -55,14 +78,15 @@ class ViewController: UIViewController {
         
     }
     
-    var nameOfFiles = ["empty", "Mojave Picture-0-1", "Mojave Picture-0-2", "Mojave Picture-0-3", "Mojave Picture-0-4", "Mojave Picture-1-0", "Mojave Picture-1-1", "Mojave Picture-1-2", "Mojave Picture-1-3", "Mojave Picture-1-4", "Mojave Picture-2-0", "Mojave Picture-2-1", "Mojave Picture-2-2", "Mojave Picture-2-3", "Mojave Picture-2-4", "Mojave Picture-3-0", "Mojave Picture-3-1", "Mojave Picture-3-2", "Mojave Picture-3-3", "Mojave Picture-3-4"].shuffled()
+    var nameOfFiles = ["Mojave Picture-0-1", "empty", "Mojave Picture-0-2", "Mojave Picture-0-3", "Mojave Picture-0-4", "Mojave Picture-1-0", "Mojave Picture-1-1", "Mojave Picture-1-2", "Mojave Picture-1-3", "Mojave Picture-1-4", "Mojave Picture-2-0", "Mojave Picture-2-1", "Mojave Picture-2-2", "Mojave Picture-2-3", "Mojave Picture-2-4", "Mojave Picture-3-0", "Mojave Picture-3-1", "Mojave Picture-3-2", "Mojave Picture-3-3", "Mojave Picture-3-4"].shuffled() // Shuffled array to shuffle puzzle pieces
     
     
-    var answer = ["empty", "Mojave Picture-0-1", "Mojave Picture-0-2", "Mojave Picture-0-3", "Mojave Picture-0-4", "Mojave Picture-1-0", "Mojave Picture-1-1", "Mojave Picture-1-2", "Mojave Picture-1-3", "Mojave Picture-1-4", "Mojave Picture-2-0", "Mojave Picture-2-1", "Mojave Picture-2-2", "Mojave Picture-2-3", "Mojave Picture-2-4", "Mojave Picture-3-0", "Mojave Picture-3-1", "Mojave Picture-3-2", "Mojave Picture-3-3", "Mojave Picture-3-4"]
+    var answer = ["empty", "Mojave Picture-0-1", "Mojave Picture-0-2", "Mojave Picture-0-3", "Mojave Picture-0-4", "Mojave Picture-1-0", "Mojave Picture-1-1", "Mojave Picture-1-2", "Mojave Picture-1-3", "Mojave Picture-1-4", "Mojave Picture-2-0", "Mojave Picture-2-1", "Mojave Picture-2-2", "Mojave Picture-2-3", "Mojave Picture-2-4", "Mojave Picture-3-0", "Mojave Picture-3-1", "Mojave Picture-3-2", "Mojave Picture-3-3", "Mojave Picture-3-4"] // Answer key
     
     
-    @IBAction func ShuffleButtonPushed(_ sender: UIButton) {
-        if shuffleButton.currentTitle == "Shuffle" {
+    @IBAction func ShuffleButtonPushed(_ sender: UIButton) { // Shuffle Button Handler
+        if shuffleButton.currentTitle == "Shuffle" { // If game just started do the following
+            answerButton.isEnabled = true
             Box1.image = UIImage(named: nameOfFiles[0])
             Box2.image = UIImage(named: nameOfFiles[1])
             Box3.image = UIImage(named: nameOfFiles[2])
@@ -83,9 +107,13 @@ class ViewController: UIViewController {
             Box18.image = UIImage(named: nameOfFiles[17])
             Box19.image = UIImage(named: nameOfFiles[18])
             Box20.image = UIImage(named: nameOfFiles[19])
-            shuffleButton.isEnabled = false
+            shuffleButton.isEnabled = false // Disable shuffle button since game started
+            //answerButton.isEnabled = true
+            //answerButton.isSelected = false
+            //answerButton.setTitle("Show Answer", for: .normal)
         } else {
-            nameOfFiles.shuffle()
+            nameOfFiles.shuffle() // If game was won & shuffle button is pressed, reshuffle cards and do assign images
+            answerButton.isEnabled = true
             Box1.image = UIImage(named: nameOfFiles[0])
             Box2.image = UIImage(named: nameOfFiles[1])
             Box3.image = UIImage(named: nameOfFiles[2])
@@ -106,13 +134,15 @@ class ViewController: UIViewController {
             Box18.image = UIImage(named: nameOfFiles[17])
             Box19.image = UIImage(named: nameOfFiles[18])
             Box20.image = UIImage(named: nameOfFiles[19])
-            shuffleButton.isEnabled = false
+            shuffleButton.isEnabled = false // Disable shuffle button since game has started
         }
         
     }
     
-    @IBAction func AnswerButtonPressed(_ sender: UIButton) {
-        if answerButton.currentTitle == "Show Answer" {
+    @IBAction func AnswerButtonPressed(_ sender: UIButton) { // Answer Button Handler
+        //answerButton.isEnabled = true
+        //answerButton.isSelected = false
+        if answerButton.currentTitle == "Show Answer" { // If button title says "Show Answer", show the answer
             Box1.image = UIImage(named: answer[0])
             Box2.image = UIImage(named: answer[1])
             Box3.image = UIImage(named: answer[2])
@@ -133,7 +163,7 @@ class ViewController: UIViewController {
             Box18.image = UIImage(named: answer[17])
             Box19.image = UIImage(named: answer[18])
             Box20.image = UIImage(named: answer[19])
-            Box1.isUserInteractionEnabled = false
+            Box1.isUserInteractionEnabled = false // Disable user interaction when answer is displayed
             Box2.isUserInteractionEnabled = false
             Box3.isUserInteractionEnabled = false
             Box4.isUserInteractionEnabled = false
@@ -152,12 +182,12 @@ class ViewController: UIViewController {
             Box18.isUserInteractionEnabled = false
             Box19.isUserInteractionEnabled = false
             Box20.isUserInteractionEnabled = false
-            answerButton.isEnabled = true
-            answerButton.isSelected = false
+            //answerButton.isEnabled = true
+            //answerButton.isSelected = false
             
             
             answerButton.setTitle("Hide Answer", for: .normal)
-        } else {
+        } else { // If title says "Hide Answer", hide the answer and re-enable user interaction
             Box1.isUserInteractionEnabled = true
             Box2.isUserInteractionEnabled = true
             Box3.isUserInteractionEnabled = true
@@ -178,7 +208,7 @@ class ViewController: UIViewController {
             Box18.isUserInteractionEnabled = true
             Box19.isUserInteractionEnabled = true
             Box20.isUserInteractionEnabled = true
-            Box1.image = UIImage(named: nameOfFiles[0])
+            Box1.image = UIImage(named: nameOfFiles[0]) // Replace answer with shuffled images
             Box2.image = UIImage(named: nameOfFiles[1])
             Box3.image = UIImage(named: nameOfFiles[2])
             Box4.image = UIImage(named: nameOfFiles[3])
@@ -199,14 +229,21 @@ class ViewController: UIViewController {
             Box19.image = UIImage(named: nameOfFiles[18])
             Box20.image = UIImage(named: nameOfFiles[19])
             answerButton.setTitle("Show Answer", for: .normal)
-            answerButton.isEnabled = true
-            answerButton.isSelected = false
+            //answerButton.isEnabled = true
+            //answerButton.isSelected = false
         }
     }
     
-    func isValid(_ box: UIImageView) -> Bool {
+    func isValid(_ box: UIImageView) -> Bool { // Checks for valid move
+        
+        /*
+        Each box is checked for x and y axis
+        If the box is within range of the passed box,
+        Check if the image is a gray square,
+        If so, swap
+        */
 
-        if box.center.x == 55.5 {
+        if box.center.x == 55.5 { // Checks the first row
             if box.center.y == 218.5 {
                 if imageCompare(Box2) {
                     swapImage(box, Box2)
@@ -283,7 +320,7 @@ class ViewController: UIViewController {
         }
         
         
-        if box.center.x == 148.5 {
+        if box.center.x == 148.5 { // Checks the second row
             if box.center.y == 218.5 {
                 if imageCompare(Box1) {
                     swapImage(box, Box1)
@@ -399,7 +436,7 @@ class ViewController: UIViewController {
         }
         
         
-        if box.center.x == 241.5 {
+        if box.center.x == 241.5 { // Checks the third row
             if box.center.y == 218.5 {
                 if imageCompare(Box6) {
                     swapImage(box, Box6)
@@ -514,7 +551,7 @@ class ViewController: UIViewController {
             }
         }
         
-        if box.center.x == 334.5 {
+        if box.center.x == 334.5 { // Checks the fourth row
             if box.center.y == 218.5 {
                 if imageCompare(Box11) {
                     swapImage(box, Box11)
@@ -736,45 +773,51 @@ class ViewController: UIViewController {
         return false
     }
     
-    func imageCompare(_ image: UIImageView) -> Bool{
-        let emptyImage = UIImage(named: "empty")
-        let newImage: UIImage = image.image!
-        return emptyImage?.pngData() == newImage.pngData()
+    func imageCompare(_ image: UIImageView) -> Bool{ // Function to compare Box images to gray image
+        let emptyImage = UIImage(named: "empty") // Create image with the image "empty"
+        let newImage: UIImage = image.image! // Create image from passed ImageView
+        return emptyImage?.pngData() == newImage.pngData() // Return true if images are the same, false if not
     }
     
-    func swapImage(_ box1: UIImageView, _ box2: UIImageView) {
+    func swapImage(_ box1: UIImageView, _ box2: UIImageView) { // Function to swap images and array indexes
         
-        var box1Index: Int? = nil
+        var box1Index: Int? = nil // Initialize index variables
         var box2Index: Int? = nil
         
-        for name in nameOfFiles {
+        for name in nameOfFiles { // For loop to find the image within array
             let temp: UIImage = UIImage(named: name)!
-            if box1.image?.pngData() == temp.pngData() {
-                box1Index = nameOfFiles.firstIndex(of: name)!
-            } else if box2.image?.pngData() == temp.pngData() {
-                box2Index = nameOfFiles.firstIndex(of: name)!
+            if box1.image?.pngData() == temp.pngData() { // If array index is found:
+                box1Index = nameOfFiles.firstIndex(of: name)! // Assign variable 1 to the index value
+            }
+            if box2.image?.pngData() == temp.pngData() {
+                box2Index = nameOfFiles.firstIndex(of: name)! // Assign variable 2 to the index value
             }
         }
         
+        // Swap array elemtents
+        
+        print ("Swapping \(nameOfFiles[box1Index!]) & \(nameOfFiles[box2Index!])")
         let tempString = nameOfFiles[box1Index!]
         nameOfFiles[box1Index!] = nameOfFiles[box2Index!]
         nameOfFiles[box2Index!] = tempString
         
+        // Swap images
         let tempImage: UIImage = box1.image!
         box1.image = box2.image
         box2.image = tempImage
         
     }
     
-    func checkForWin() -> Bool {
+    func checkForWin() -> Bool { // Function to check for win
         var index = 0
         for name in nameOfFiles {
-            if name != answer[index] {
-                return false
+            print("Comparing \(name) & \(answer[index])")                            // Cycle through shuffled images array
+            if name != answer[index] { // Once a string does not match with the answer key,
+                return false           // Return false
             }
-            index += 1
+            index = index + 1         // Increase index if strings match
         }
-        return true
+        return true                   // If it makes it through the entire loop then a win is detected
     }
 }
 
