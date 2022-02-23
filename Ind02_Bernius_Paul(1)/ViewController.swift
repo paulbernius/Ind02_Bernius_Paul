@@ -40,23 +40,27 @@ class ViewController: UIViewController {
         answerButton.setTitle("Show Answer", for: .normal)
         shuffleButton.setTitle("Shuffle", for: .normal)
         answerButton.isEnabled = false
+        Box1.isUserInteractionEnabled = false // Disable user interaction when answer is displayed
+        Box2.isUserInteractionEnabled = false
+        Box3.isUserInteractionEnabled = false
+        Box4.isUserInteractionEnabled = false
+        Box5.isUserInteractionEnabled = false
+        Box6.isUserInteractionEnabled = false
+        Box7.isUserInteractionEnabled = false
+        Box8.isUserInteractionEnabled = false
+        Box9.isUserInteractionEnabled = false
+        Box10.isUserInteractionEnabled = false
+        Box12.isUserInteractionEnabled = false
+        Box13.isUserInteractionEnabled = false
+        Box14.isUserInteractionEnabled = false
+        Box15.isUserInteractionEnabled = false
+        Box16.isUserInteractionEnabled = false
+        Box17.isUserInteractionEnabled = false
+        Box18.isUserInteractionEnabled = false
+        Box19.isUserInteractionEnabled = false
+        Box20.isUserInteractionEnabled = false
         //answerButton.isEnabled = false
         //answerButton.isSelected = false
-    }
-    
-    
-    @IBAction func forceWinButton(_ sender: UIButton) {
-        var indexTest = 0
-        for elem in answer {
-            nameOfFiles[indexTest] = elem
-            indexTest += 1
-        }
-        if checkForWin() {
-            print("Win detected!")
-            shuffleButton.isEnabled = true // Enable shuffle button
-            shuffleButton.setTitle("Win! Shuffle again?", for: .normal) // Replace shuffle button text
-            
-        }
     }
     
     
@@ -64,10 +68,8 @@ class ViewController: UIViewController {
         guard let tappedImageView = sender.view as? UIImageView else {
             return
         }
-        print("Calling isValid")
         if !isValid(tappedImageView) { // Calls isValid function on the tapped box
             if checkForWin() { // Checks for win if move was valid
-                print("Win detected")
                 shuffleButton.isEnabled = true // Enable shuffle button
                 shuffleButton.setTitle("Win! Shuffle again?", for: .normal) // Replace shuffle button text
                 answerButton.isEnabled = false
@@ -107,6 +109,26 @@ class ViewController: UIViewController {
             Box18.image = UIImage(named: nameOfFiles[17])
             Box19.image = UIImage(named: nameOfFiles[18])
             Box20.image = UIImage(named: nameOfFiles[19])
+            Box1.isUserInteractionEnabled = true
+            Box2.isUserInteractionEnabled = true
+            Box3.isUserInteractionEnabled = true
+            Box4.isUserInteractionEnabled = true
+            Box5.isUserInteractionEnabled = true
+            Box6.isUserInteractionEnabled = true
+            Box7.isUserInteractionEnabled = true
+            Box8.isUserInteractionEnabled = true
+            Box9.isUserInteractionEnabled = true
+            Box10.isUserInteractionEnabled = true
+            Box11.isUserInteractionEnabled = true
+            Box12.isUserInteractionEnabled = true
+            Box13.isUserInteractionEnabled = true
+            Box14.isUserInteractionEnabled = true
+            Box15.isUserInteractionEnabled = true
+            Box16.isUserInteractionEnabled = true
+            Box17.isUserInteractionEnabled = true
+            Box18.isUserInteractionEnabled = true
+            Box19.isUserInteractionEnabled = true
+            Box20.isUserInteractionEnabled = true
             shuffleButton.isEnabled = false // Disable shuffle button since game started
             //answerButton.isEnabled = true
             //answerButton.isSelected = false
@@ -627,149 +649,6 @@ class ViewController: UIViewController {
             }
         }
         
-        /*
-        if Box1.center.x == upperXCenter || Box1.center.x == lowerXCenter || Box1.center.y == upperYCenter || Box1.center.y == lowerYCenter {
-            print("Box1")
-            if (imageCompare(Box1)) {
-                
-                swapImage(Box1, box)
-                return true
-            }
-        }
-        if Box2.center.x == upperXCenter || Box2.center.x == lowerXCenter || Box2.center.y == upperYCenter || Box2.center.y == lowerYCenter {
-            print("Box2")
-            if (imageCompare(Box2)) {
-                swapImage(Box2, box)
-                return true
-            }
-        }
-        if Box3.center.x == upperXCenter || Box3.center.x == lowerXCenter || Box3.center.y == upperYCenter || Box3.center.y == lowerYCenter {
-            print("Box3")
-            if (imageCompare(Box3)) {
-                swapImage(Box3, box)
-                return true
-            }
-        }
-        if Box4.center.x == upperXCenter || Box4.center.x == lowerXCenter || Box4.center.y == upperYCenter || Box4.center.y == lowerYCenter {
-            print("Box4")
-            if (imageCompare(Box4)) {
-                swapImage(Box4, box)
-                return true
-            }
-        }
-        if Box5.center.x == upperXCenter || Box5.center.x == lowerXCenter || Box5.center.y == upperYCenter || Box5.center.y == lowerYCenter {
-            print("Box5")
-            if (imageCompare(Box5)) {
-                swapImage(Box5, box)
-                return true
-            }
-        }
-        if Box6.center.x == upperXCenter || Box6.center.x == lowerXCenter || Box6.center.y == upperYCenter || Box6.center.y == lowerYCenter {
-            print("Box6")
-            if (imageCompare(Box6)) {
-                swapImage(Box6, box)
-                return true
-            }
-        }
-        if Box7.center.x == upperXCenter || Box7.center.x == lowerXCenter || Box7.center.y == upperYCenter || Box7.center.y == lowerYCenter {
-            print("Box7")
-            if (imageCompare(Box7)) {
-                swapImage(Box7, box)
-                return true
-            }
-        }
-        if Box8.center.x == upperXCenter || Box8.center.x == lowerXCenter || Box8.center.y == upperYCenter || Box8.center.y == lowerYCenter {
-            print("Box8")
-            if (imageCompare(Box8)) {
-                swapImage(Box8, box)
-                return true
-            }
-        }
-        if Box9.center.x == upperXCenter || Box9.center.x == lowerXCenter || Box9.center.y == upperYCenter || Box9.center.y == lowerYCenter {
-            print("Box9")
-            if (imageCompare(Box9)) {
-                swapImage(Box9, box)
-                return true
-            }
-        }
-        if Box10.center.x == upperXCenter || Box10.center.x == lowerXCenter || Box10.center.y == upperYCenter || Box10.center.y == lowerYCenter {
-            print("Box10")
-            if (imageCompare(Box10)) {
-                swapImage(Box10, box)
-                return true
-            }
-        }
-        if Box11.center.x == upperXCenter || Box11.center.x == lowerXCenter || Box11.center.y == upperYCenter || Box11.center.y == lowerYCenter {
-            print("Box11")
-            if (imageCompare(Box11)) {
-                swapImage(Box11, box)
-                return true
-            }
-        }
-        if Box12.center.x == upperXCenter || Box12.center.x == lowerXCenter || Box12.center.y == upperYCenter || Box12.center.y == lowerYCenter {
-            print("Box12")
-            if (imageCompare(Box12)) {
-                swapImage(Box12, box)
-                return true
-            }
-        }
-        if Box13.center.x == upperXCenter || Box13.center.x == lowerXCenter || Box13.center.y == upperYCenter || Box13.center.y == lowerYCenter {
-            print("Box13")
-            if (imageCompare(Box13)) {
-                swapImage(Box13, box)
-                return true
-            }
-        }
-        if Box14.center.x == upperXCenter || Box14.center.x == lowerXCenter || Box14.center.y == upperYCenter || Box14.center.y == lowerYCenter {
-            print("Box14")
-            if (imageCompare(Box14)) {
-                swapImage(Box14, box)
-                return true
-            }
-        }
-        if Box15.center.x == upperXCenter || Box15.center.x == lowerXCenter || Box15.center.y == upperYCenter || Box15.center.y == lowerYCenter {
-            print("Box15")
-            if (imageCompare(Box15)) {
-                swapImage(Box15, box)
-                return true
-            }
-        }
-        if Box16.center.x == upperXCenter || Box16.center.x == lowerXCenter || Box16.center.y == upperYCenter || Box16.center.y == lowerYCenter {
-            print("Box16")
-            if (imageCompare(Box16)) {
-                swapImage(Box16, box)
-                return true
-            }
-        }
-        if Box17.center.x == upperXCenter || Box17.center.x == lowerXCenter || Box17.center.y == upperYCenter || Box17.center.y == lowerYCenter {
-            print("Box17")
-            if (imageCompare(Box17)) {
-                swapImage(Box17, box)
-                return true
-            }
-        }
-        if Box18.center.x == upperXCenter || Box18.center.x == lowerXCenter || Box18.center.y == upperYCenter || Box18.center.y == lowerYCenter {
-            print("Box18")
-            if (imageCompare(Box18)) {
-                swapImage(Box18, box)
-                return true
-            }
-        }
-        if Box19.center.x == upperXCenter || Box19.center.x == lowerXCenter || Box19.center.y == upperYCenter || Box19.center.y == lowerYCenter {
-            print("Box19")
-            if (imageCompare(Box19)) {
-                swapImage(Box19, box)
-                return true
-            }
-        }
-        if Box20.center.x == upperXCenter || Box20.center.x == lowerXCenter || Box20.center.y == upperYCenter || Box20.center.y == lowerYCenter {
-            print("Box20")
-            if (imageCompare(Box20)) {
-                swapImage(Box20, box)
-                return true
-            }
-        }*/
-        
         return false
     }
     
@@ -795,8 +674,6 @@ class ViewController: UIViewController {
         }
         
         // Swap array elemtents
-        
-        print ("Swapping \(nameOfFiles[box1Index!]) & \(nameOfFiles[box2Index!])")
         let tempString = nameOfFiles[box1Index!]
         nameOfFiles[box1Index!] = nameOfFiles[box2Index!]
         nameOfFiles[box2Index!] = tempString
@@ -810,8 +687,7 @@ class ViewController: UIViewController {
     
     func checkForWin() -> Bool { // Function to check for win
         var index = 0
-        for name in nameOfFiles {
-            print("Comparing \(name) & \(answer[index])")                            // Cycle through shuffled images array
+        for name in nameOfFiles {      // Cycle through shuffled images array
             if name != answer[index] { // Once a string does not match with the answer key,
                 return false           // Return false
             }
