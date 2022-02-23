@@ -33,14 +33,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var answerButton: UIButton!
     @IBOutlet weak var shuffleButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        answerButton.setTitle("Show Answer", for: .normal)
+        answerButton.setTitle("Show Answer", for: .normal) // SetTitles to ensure the checks done later are accurate
         shuffleButton.setTitle("Shuffle", for: .normal)
-        answerButton.isEnabled = false
-        Box1.isUserInteractionEnabled = false // Disable user interaction when answer is displayed
+        answerButton.isEnabled = false          // Answer button remains hiden until the puzzle is shuffled
+        Box1.isUserInteractionEnabled = false   // Disable user interaction when answer is displayed
         Box2.isUserInteractionEnabled = false
         Box3.isUserInteractionEnabled = false
         Box4.isUserInteractionEnabled = false
@@ -59,39 +57,34 @@ class ViewController: UIViewController {
         Box18.isUserInteractionEnabled = false
         Box19.isUserInteractionEnabled = false
         Box20.isUserInteractionEnabled = false
-        //answerButton.isEnabled = false
-        //answerButton.isSelected = false
     }
-    
     
     @IBAction func tapHandler(_ sender: UITapGestureRecognizer) { // Handles taps on boxes
         guard let tappedImageView = sender.view as? UIImageView else {
             return
         }
-        if !isValid(tappedImageView) { // Calls isValid function on the tapped box
-            if checkForWin() { // Checks for win if move was valid
-                shuffleButton.isEnabled = true // Enable shuffle button
+        
+        if !isValid(tappedImageView) {          // Calls isValid function on the tapped box
+            if checkForWin() {                  // Checks for win if move was valid
+                shuffleButton.isEnabled = true  // Enable shuffle button
                 shuffleButton.setTitle("Win! Shuffle again?", for: .normal) // Replace shuffle button text
-                answerButton.isEnabled = false
-                shuffleButton.tintColor = UIColor.systemGreen
-                //shuffleButton.setTitleColor(.systemGreen, for: .normal)
-                //shuffleButton.
+                answerButton.isEnabled = false  // Disable answer button since answer is already displayed
+                shuffleButton.tintColor = UIColor.systemGreen // Change button color to green indicating a win
             }
             return
         }
-        
     }
     
-    var nameOfFiles = ["Mojave Picture-0-1", "empty", "Mojave Picture-0-2", "Mojave Picture-0-3", "Mojave Picture-0-4", "Mojave Picture-1-0", "Mojave Picture-1-1", "Mojave Picture-1-2", "Mojave Picture-1-3", "Mojave Picture-1-4", "Mojave Picture-2-0", "Mojave Picture-2-1", "Mojave Picture-2-2", "Mojave Picture-2-3", "Mojave Picture-2-4", "Mojave Picture-3-0", "Mojave Picture-3-1", "Mojave Picture-3-2", "Mojave Picture-3-3", "Mojave Picture-3-4"]//.shuffled() // Shuffled array to shuffle puzzle pieces
+    var nameOfFiles = ["empty", "Mojave Picture-0-1", "Mojave Picture-0-2", "Mojave Picture-0-3", "Mojave Picture-0-4", "Mojave Picture-1-0", "Mojave Picture-1-1", "Mojave Picture-1-2", "Mojave Picture-1-3", "Mojave Picture-1-4", "Mojave Picture-2-0", "Mojave Picture-2-1", "Mojave Picture-2-2", "Mojave Picture-2-3", "Mojave Picture-2-4", "Mojave Picture-3-0", "Mojave Picture-3-1", "Mojave Picture-3-2", "Mojave Picture-3-3", "Mojave Picture-3-4"].shuffled()
+    // Shuffled array to shuffle puzzle pieces
     
-    
-    var answer = ["empty", "Mojave Picture-0-1", "Mojave Picture-0-2", "Mojave Picture-0-3", "Mojave Picture-0-4", "Mojave Picture-1-0", "Mojave Picture-1-1", "Mojave Picture-1-2", "Mojave Picture-1-3", "Mojave Picture-1-4", "Mojave Picture-2-0", "Mojave Picture-2-1", "Mojave Picture-2-2", "Mojave Picture-2-3", "Mojave Picture-2-4", "Mojave Picture-3-0", "Mojave Picture-3-1", "Mojave Picture-3-2", "Mojave Picture-3-3", "Mojave Picture-3-4"] // Answer key
-    
+    var answer = ["empty", "Mojave Picture-0-1", "Mojave Picture-0-2", "Mojave Picture-0-3", "Mojave Picture-0-4", "Mojave Picture-1-0", "Mojave Picture-1-1", "Mojave Picture-1-2", "Mojave Picture-1-3", "Mojave Picture-1-4", "Mojave Picture-2-0", "Mojave Picture-2-1", "Mojave Picture-2-2", "Mojave Picture-2-3", "Mojave Picture-2-4", "Mojave Picture-3-0", "Mojave Picture-3-1", "Mojave Picture-3-2", "Mojave Picture-3-3", "Mojave Picture-3-4"]
+    // Answer key
     
     @IBAction func ShuffleButtonPushed(_ sender: UIButton) { // Shuffle Button Handler
         if shuffleButton.currentTitle == "Shuffle" { // If game just started do the following
-            answerButton.isEnabled = true
-            Box1.image = UIImage(named: nameOfFiles[0])
+            answerButton.isEnabled = true            // Enable answer button since game has started
+            Box1.image = UIImage(named: nameOfFiles[0]) // Fill ImageViews with shuffled images
             Box2.image = UIImage(named: nameOfFiles[1])
             Box3.image = UIImage(named: nameOfFiles[2])
             Box4.image = UIImage(named: nameOfFiles[3])
@@ -111,7 +104,7 @@ class ViewController: UIViewController {
             Box18.image = UIImage(named: nameOfFiles[17])
             Box19.image = UIImage(named: nameOfFiles[18])
             Box20.image = UIImage(named: nameOfFiles[19])
-            Box1.isUserInteractionEnabled = true
+            Box1.isUserInteractionEnabled = true // Enable user interaction on ImageViews
             Box2.isUserInteractionEnabled = true
             Box3.isUserInteractionEnabled = true
             Box4.isUserInteractionEnabled = true
@@ -132,13 +125,10 @@ class ViewController: UIViewController {
             Box19.isUserInteractionEnabled = true
             Box20.isUserInteractionEnabled = true
             shuffleButton.isEnabled = false // Disable shuffle button since game started
-            //answerButton.isEnabled = true
-            //answerButton.isSelected = false
-            //answerButton.setTitle("Show Answer", for: .normal)
         } else {
             nameOfFiles.shuffle() // If game was won & shuffle button is pressed, reshuffle cards and do assign images
-            answerButton.isEnabled = true
-            Box1.image = UIImage(named: nameOfFiles[0])
+            answerButton.isEnabled = true // Enable answer button since a new game has started
+            Box1.image = UIImage(named: nameOfFiles[0]) // Fill ImageViews with shuffled images
             Box2.image = UIImage(named: nameOfFiles[1])
             Box3.image = UIImage(named: nameOfFiles[2])
             Box4.image = UIImage(named: nameOfFiles[3])
@@ -158,18 +148,15 @@ class ViewController: UIViewController {
             Box18.image = UIImage(named: nameOfFiles[17])
             Box19.image = UIImage(named: nameOfFiles[18])
             Box20.image = UIImage(named: nameOfFiles[19])
-            shuffleButton.tintColor = UIColor.systemGreen
-            shuffleButton.setTitle("Shuffle", for: .normal)
+            shuffleButton.tintColor = UIColor.systemGray // Reset shuffle button color since new game has started
+            shuffleButton.setTitle("Shuffle", for: .normal) // Reset shuffle button title since new game has started
             shuffleButton.isEnabled = false // Disable shuffle button since game has started
         }
-        
     }
     
     @IBAction func AnswerButtonPressed(_ sender: UIButton) { // Answer Button Handler
-        //answerButton.isEnabled = true
-        //answerButton.isSelected = false
         if answerButton.currentTitle == "Show Answer" { // If button title says "Show Answer", show the answer
-            Box1.image = UIImage(named: answer[0])
+            Box1.image = UIImage(named: answer[0]) // Fill ImageViews with answer key
             Box2.image = UIImage(named: answer[1])
             Box3.image = UIImage(named: answer[2])
             Box4.image = UIImage(named: answer[3])
@@ -208,11 +195,7 @@ class ViewController: UIViewController {
             Box18.isUserInteractionEnabled = false
             Box19.isUserInteractionEnabled = false
             Box20.isUserInteractionEnabled = false
-            //answerButton.isEnabled = true
-            //answerButton.isSelected = false
-            
-            
-            answerButton.setTitle("Hide Answer", for: .normal)
+            answerButton.setTitle("Hide Answer", for: .normal) // Set answer button title "Hide Answer"
         } else { // If title says "Hide Answer", hide the answer and re-enable user interaction
             Box1.isUserInteractionEnabled = true
             Box2.isUserInteractionEnabled = true
@@ -254,16 +237,14 @@ class ViewController: UIViewController {
             Box18.image = UIImage(named: nameOfFiles[17])
             Box19.image = UIImage(named: nameOfFiles[18])
             Box20.image = UIImage(named: nameOfFiles[19])
-            answerButton.setTitle("Show Answer", for: .normal)
-            //answerButton.isEnabled = true
-            //answerButton.isSelected = false
+            answerButton.setTitle("Show Answer", for: .normal) // Reset answer button title
         }
     }
     
     func isValid(_ box: UIImageView) -> Bool { // Checks for valid move
         
         /*
-        Each box is checked for x and y axis
+        Each box is checked for x and y axis using .center.x & .center.y
         If the box is within range of the passed box,
         Check if the image is a gray square,
         If so, swap
@@ -652,8 +633,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
-        return false
+        return false // Returns false, but is negated when used. This could be changed from 'False' to 'True' and the condition would not need to be negated.
     }
     
     func imageCompare(_ image: UIImageView) -> Bool{ // Function to compare Box images to gray image
@@ -686,7 +666,6 @@ class ViewController: UIViewController {
         let tempImage: UIImage = box1.image!
         box1.image = box2.image
         box2.image = tempImage
-        
     }
     
     func checkForWin() -> Bool { // Function to check for win
@@ -700,4 +679,3 @@ class ViewController: UIViewController {
         return true                   // If it makes it through the entire loop then a win is detected
     }
 }
-
